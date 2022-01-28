@@ -11,18 +11,22 @@
             width: 100%;height: 150vh;
             background-color: #fff;
             padding: 70px 20px 20px 20px;
-
+            position: fixed;
+            
         }
         a{
             text-decoration: none;
             color: inherit;
         }
-        #s1{padding: 50px 0 30px 0;}
+        #s1{
+            width: 350px;
+            padding: 50px 20px 30px 20px;
+            margin: auto;}
         #s1>p{color: rgb(93, 93, 93);}
         #s2{
             width: 100%;
             height: 210px;
-            background: rgb(171, 135, 255);position: relative;
+            position: relative;
             padding: 20px 0;
             display: flex;
             justify-content: center;
@@ -35,6 +39,28 @@
             transform: translateY(-50%);
             cursor: pointer;
         }
+        .outer {
+            width: 350px;
+        height: 200px;
+        margin: 0 auto;
+        overflow-x: hidden;
+        border-radius: 20px;
+        }
+        
+        .inner-list {
+            display: flex;
+            transition: .6s ease-out;
+            height: 100%;
+        }
+        
+        .inner {
+            padding: 0 5px;
+        }
+        img{
+            opacity: .9;
+            border-radius: 20px;
+            width:100%; height: 100%;
+        }
         #in{
             position: absolute;
             padding: 0 10px;
@@ -43,9 +69,19 @@
             cursor: pointer;
         }
         #s3{
-            /* height: 300px; */
             background: rgb(151, 149, 149);
             padding: 20px;
+            width: 350px;
+            height: 210px;
+            border-radius: 20px;
+            margin: auto;
+        }
+        #s3 .content{
+            background: rgb(151, 149, 149);
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            overflow: auto;
         }
         header{
             z-index: 100;
@@ -66,10 +102,11 @@
         footer>a{
             border-radius: 20px;
             text-align: center;
-            width: 100%;
+            width: 350px;
             height: 40px;
             background: rgb(42, 36, 235);
             display: flex;
+            margin: auto;
         }
         footer>a>span{
             margin: auto;
@@ -83,16 +120,24 @@
         <p>description</p>
     </section>
     <section id="s2">
-        <div id="is">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+        <div class="outer">
+            <div class="inner-list">
+                <div class="inner">
+                    <img src="/Welcome.png">
+                </div>
+                <div class="inner">
+                    <img src="/Welcome.png">
+                </div>
+                <div class="inner">
+                    <img src="/Welcome.png">
+                </div>
+            </div>
         </div>
-            <i id="ip">Prev</i>
-            <i id="in">Next</i>
+            <i class="button-left" id="ip">Prev</i>
+            <i class="button-right" id="in">Next</i>
     </section>
     <section id="s3">
-        <p>
+        <p class="content">
             <br>
             *Real time clock<br><br>
             *Greetings and background color are set to change at a specified time <br><br>
@@ -115,6 +160,37 @@
         <a href="https://originalanswer.github.io/Welcome/" target="_blank"><span>TRY</span></a>
     </footer>
     <!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+    <script type="text/javascript">
+        
+const outer = document.querySelector('.outer');
+const innerList = document.querySelector('.inner-list');
+const inners = document.querySelectorAll('.inner');
+let currentIndex = 0; // 현재 슬라이드 화면 인덱스
+
+inners.forEach((inner) => {
+  inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+})
+
+innerList.style.width = `${outer.clientWidth * inners.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
+
+/*
+  버튼에 이벤트 등록하기
+*/
+const buttonLeft = document.querySelector('.button-left');
+const buttonRight = document.querySelector('.button-right');
+
+buttonLeft.addEventListener('click', () => {
+  currentIndex--;
+  currentIndex = currentIndex < 0 ? 0 : currentIndex; // index값이 0보다 작아질 경우 0으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+});
+
+buttonRight.addEventListener('click', () => {
+  currentIndex++;
+  currentIndex = currentIndex >= inners.length ? inners.length - 1 : currentIndex; // index값이 inner의 총 개수보다 많아질 경우 마지막 인덱스값으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+});
+    </script>
     <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
 </body>
 </html>
