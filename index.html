@@ -8,29 +8,64 @@
     <style>
         *{margin: 0;padding: 0;box-sizing: border-box;}
         body{
-            width: 100%;height: 150vh;
+            width: 100%;height: 100%;
             background-color: #fff;
-            padding: 70px 20px 20px 20px;
+            padding: 60px 20px 20px 20px;
             position: fixed;
-            
+            display: flex;
+            box-sizing:border-box;
+            flex-direction: column;
         }
         a{
             text-decoration: none;
             color: inherit;
         }
+        header,footer{
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+            height: 5vh;
+            color: #fff;
+        }
+        header{
+            color: #000;
+            top: 0;left: 0;
+            padding: 22px;
+        }
+        footer{
+            bottom: 0;left: 0;
+            padding: 0 20px;
+            background: #fff;
+            display: flex;
+        }
+        footer>a{
+            border-radius: 20px;
+            text-align: center;
+            width: 350px;
+            height: auto;
+            background: rgb(42, 36, 235);
+            display: flex;
+            margin: auto;
+        }
+        footer>a>span{
+            margin: auto;
+        }
         #s1{
             width: 350px;
-            padding: 50px 20px 30px 20px;
-            margin: auto;}
+            height: 15vh;
+            padding: 0 20px 30px 20px;
+            margin: 0 auto 0 auto;
+        }
         #s1>p{color: rgb(93, 93, 93);}
         #s2{
             width: 100%;
-            height: 210px;
+            height: 30vh;
             position: relative;
             padding: 20px 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 5px 0;
         }
         #ip{
             position: absolute;
@@ -41,10 +76,10 @@
         }
         .outer {
             width: 350px;
-        height: 200px;
-        margin: 0 auto;
-        overflow-x: hidden;
-        border-radius: 20px;
+            height: auto;
+            margin: 0 auto;
+            overflow-x: hidden;
+            border-radius: 20px;
         }
         
         .inner-list {
@@ -69,47 +104,19 @@
             cursor: pointer;
         }
         #s3{
-            background: rgb(151, 149, 149);
-            padding: 20px;
+            padding: 20px 0px 20px 0px;
             width: 350px;
-            height: 210px;
+            height: 40vh;
             border-radius: 20px;
-            margin: auto;
+            margin: 0 auto 0 auto;
+            overflow: hidden;
         }
         #s3 .content{
-            background: rgb(151, 149, 149);
+            border: 1px solid rgb(151, 149, 149);
+            border-radius: 20px;
             width: 100%;
             height: 100%;
-            border-radius: 20px;
             overflow: auto;
-        }
-        header{
-            z-index: 100;
-            position: fixed;
-            top: 0;left: 0;
-            width: 100%;
-            padding: 22px;
-            background: #fff;}
-        footer{
-            position: fixed;
-            bottom: 0;left: 0;
-            width: 100%;
-            color: #fff;
-            padding: 10px 20px;
-            background: #fff;
-            display: flex;
-        }
-        footer>a{
-            border-radius: 20px;
-            text-align: center;
-            width: 350px;
-            height: 40px;
-            background: rgb(42, 36, 235);
-            display: flex;
-            margin: auto;
-        }
-        footer>a>span{
-            margin: auto;
         }
         </style>
 </head>
