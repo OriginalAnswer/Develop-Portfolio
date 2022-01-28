@@ -10,32 +10,37 @@
         body{
             width: 100%;height: 150vh;
             background-color: #fff;
-            padding: 20px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 70px 20px 20px 20px;
+
         }
         a{
             text-decoration: none;
             color: inherit;
         }
+        #s1{padding: 50px 0 30px 0;}
         #s1>p{color: rgb(93, 93, 93);}
         #s2{
             width: 100%;
-            background: rgb(171, 135, 255);position: relative;}
-            #s2>#imgs{
-            width: 100%;
-            height: 200px;
-            display: inline-flex;
-            overflow: hidden;
+            height: 210px;
+            background: rgb(171, 135, 255);position: relative;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        #s2>#is{}
-        #s3{background: rgb(151, 149, 149);}
+        #s3{
+            height: 300px;
+            background: rgb(151, 149, 149);
+            padding: 20px;
+        }
+        #s3>#is{
+            position: absolute;
+        }
         header{
             position: fixed;
             top: 0;left: 0;
             width: 100%;
-            margin: 22px 24px;
+            padding: 22px;
             background: #fff;}
         footer{
             position: fixed;
@@ -66,7 +71,7 @@
             <div>2</div>
             <div>3</div>
         </div>
-        <div class="ibox">
+        <div class="is">
             <i>Prev</i>
             <i>Next</i>
         </div>
