@@ -26,7 +26,7 @@
             position: fixed;
             z-index: 100;
             width: 100%;
-            height: 5vh;
+            height: 6.5vh;
             color: #fff;
         }
         header{
@@ -44,7 +44,7 @@
             border-radius: 20px;
             text-align: center;
             width: 350px;
-            height: 3.5vh;
+            height: 3.8vh;
             display: flex;
             margin: auto;
             background: rgb(42, 36, 235);
@@ -75,13 +75,6 @@
             align-items: center;
             margin: 5px 0;
         }
-        #ip{
-            position: absolute;
-            padding: 0 10px;
-            left: 0;top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
         .outer {
             width: 350px;
             height: auto;
@@ -106,7 +99,14 @@
             border-radius: 20px;
             width:100%; height: 100%;
         }
-        #in{
+        #il{
+            position: absolute;
+            padding: 0 10px;
+            left: 0;top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        #ir{
             position: absolute;
             padding: 0 10px;
             right: 0;top: 50%;
@@ -152,8 +152,8 @@
                 </div>
             </div>
         </div>
-            <i class="button-left" id="ip">Prev</i>
-            <i class="button-right" id="in">Next</i>
+        <i class="button-left fas fa-chevron-left" id="il"></i>
+        <i class="button-right fas fa-chevron-right" id="ir"></i>
     </section>
     <section id="s3">
         <p class="content">
