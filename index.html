@@ -28,15 +28,27 @@
             justify-content: center;
             align-items: center;
         }
+        #ip{
+            position: absolute;
+            padding: 0 10px;
+            left: 0;top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        #in{
+            position: absolute;
+            padding: 0 10px;
+            right: 0;top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
         #s3{
-            height: 300px;
+            /* height: 300px; */
             background: rgb(151, 149, 149);
             padding: 20px;
         }
-        #s3>#is{
-            position: absolute;
-        }
         header{
+            z-index: 100;
             position: fixed;
             top: 0;left: 0;
             width: 100%;
@@ -52,10 +64,15 @@
             display: flex;
         }
         footer>a{
+            border-radius: 20px;
             text-align: center;
-            margin: auto;
             width: 100%;
-            background: rgb(40, 36, 171);
+            height: 40px;
+            background: rgb(42, 36, 235);
+            display: flex;
+        }
+        footer>a>span{
+            margin: auto;
         }
         </style>
 </head>
@@ -71,16 +88,31 @@
             <div>2</div>
             <div>3</div>
         </div>
-        <div class="is">
-            <i>Prev</i>
-            <i>Next</i>
-        </div>
+            <i id="ip">Prev</i>
+            <i id="in">Next</i>
     </section>
     <section id="s3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum assumenda, numquam non, nihil illo, incidunt nulla provident cupiditate error delectus quod? Eligendi, blanditiis. Ad aperiam sequi sit mollitia rem laborum.</p>
+        <p>
+            <br>
+            *Real time clock<br><br>
+            *Greetings and background color are set to change at a specified time <br><br>
+            *You can add and delete "Todo-list"<br><br>
+            *Real time clock<br><br>
+            *Greetings and background color are set to change at a specified time <br><br>
+            *You can add and delete "Todo-list"<br><br>
+            *Real time clock<br><br>
+            *Greetings and background color are set to change at a specified time <br><br>
+            *You can add and delete "Todo-list"<br><br>
+            *Real time clock<br><br>
+            *Greetings and background color are set to change at a specified time <br><br>
+            *You can add and delete "Todo-list"<br><br>
+            *Real time clock<br><br>
+            *Greetings and background color are set to change at a specified time <br><br>
+            *You can add and delete "Todo-list"<br><br>
+        </p>
     </section>
     <footer>
-        <a href="http://">TRY</a>
+        <a href="https://originalanswer.github.io/Welcome/" target="_blank"><span>TRY</span></a>
     </footer>
     <!-- +++++++++++++++++++++++++++++++++++++++++++ -->
     <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
